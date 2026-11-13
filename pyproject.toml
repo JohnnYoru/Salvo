@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "salvo-scanner"
+version = "1.0.0"
+description = "Network discovery and firewall/IDS evasion scanner."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "JohnnYoru" }]
+keywords = ["nmap", "security", "network", "scanner", "pentest", "evasion"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Security",
+]
+dependencies = [
+    "python-nmap>=0.7.1",
+    "colorama>=0.4.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/JohnnYoru/Salvo"
+
+[project.scripts]
+salvo = "salvo.cli:main"
+
+[tool.setuptools]
+packages = ["salvo"]
